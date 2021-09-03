@@ -32,7 +32,7 @@ const displayWeather = capitalCity => {
     weather.textContent = '';
     const div = document.createElement('div')
     div.innerHTML = `
-        <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+        <img src="https://openweathermap.org/img/wn/${capitalCity.weather[0].icon}@2x.png" alt="">
         <h1 class="text-light">${capitalCity.name}</h1>
         <h2 class="text-light">Humidity ${capitalCity.main.humidity}, Temperature ${parseInt(capitalCity.main.temp - 273.15)}&deg;C</h2>
         <p class="text-light fs-4">${capitalCity.weather[0].main} </p>
